@@ -23,7 +23,7 @@ RUN apt-get install git -y
 WORKDIR /home/lesson6
 RUN git clone https://github.com/santoshkatageri/Java-Mysql-Simple-Login-Web-application.git
 WORKDIR /home/lesson6/Java-Mysql-Simple-Login-Web-application/
-RUN mvn package 
+RUN sudo mvn package 
 RUN cp LoginWebApp   /var/lib/tomcat9/webapps/
 #RUN cp ./lesson6/Java-Mysql-Simple-Login-Web-application/target/LoginWebApp.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
