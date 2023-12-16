@@ -21,7 +21,7 @@ RUN apt-get install default-jdk -y
 RUN apt-get install maven -y 
 RUN apt-get install git -y
 WORKDIR /home/lesson6
-RUN git clone https://github.com/santoshkatageri/Java-Mysql-Simple-Login-Web-application.git
-RUN mvn package
+RUN git clone https://github.com/santoshkatageri/Java-Mysql-Simple-Login-Web-application.git && cd /home/lesson6/Java-Mysql-Simple-Login-Web-application/
+RUN mvn package 
 RUN cp ./lesson6/Java-Mysql-Simple-Login-Web-application/target/LoginWebApp.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
