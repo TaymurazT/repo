@@ -17,7 +17,7 @@
 
 FROM tomcat:9.0
 RUN apt install default-jdk -y && apt install maven -y && apt install git -y
-WORKDIR ./lesson6
+WORKDIR /home/lesson6
 RUN git clone https://github.com/santoshkatageri/Java-Mysql-Simple-Login-Web-application.git
 RUN mvn package
 RUN cp ./lesson6/Java-Mysql-Simple-Login-Web-application/target/LoginWebApp.war /var/lib/tomcat9/webapps/
