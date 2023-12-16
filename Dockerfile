@@ -17,7 +17,7 @@
 
 FROM tomcat:9.0
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install default-jdk -y 
+#RUN apt-get install default-jdk -y 
 RUN apt-get install maven -y 
 RUN apt-get install git -y
 WORKDIR /home/lesson6
