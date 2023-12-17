@@ -15,7 +15,7 @@
 #ENTRYPOINT  ./usr/local/tomcat9/bin/catalina.sh run
 
 
-FROM tomcat:9.0/jdk11
+FROM tomcat:9.0.84-jdk11
 RUN apt-get update -y && apt-get upgrade -y
 #RUN apt-get install default-jdk -y 
 RUN apt-get install maven -y 
