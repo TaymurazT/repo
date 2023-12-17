@@ -25,7 +25,7 @@ RUN git clone https://github.com/santoshkatageri/Java-Mysql-Simple-Login-Web-app
 WORKDIR /home/lesson6/Java-Mysql-Simple-Login-Web-application/ 
 RUN chmod -R 777 ./ 
 RUN mvn package 
-WORKDIR /home/lesson6/Java-Mysql-Simple-Login-Web-application/target
-RUN cp /target/LoginWebApp.war   /var/lib/tomcat9/webapps/
+WORKDIR /home/lesson6/Java-Mysql-Simple-Login-Web-application/target/
+RUN cp LoginWebApp.war   /var/lib/tomcat9/webapps/
 #RUN cp ./lesson6/Java-Mysql-Simple-Login-Web-application/target/LoginWebApp.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
