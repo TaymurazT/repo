@@ -8,10 +8,10 @@ services:
       volumes: 
         - data:/usr/local/tomcat/webapp
 
-    depends_on:
+    webserver:
         image: woahbase/alpine-tomcat:x86_64
-        ports: 8080:8080
-        service_start:
+        ports: 8080:8080        
+        depends_on:
           - build-webapp
         volumes: 
           - data:/usr/local/tomcat/webapp
