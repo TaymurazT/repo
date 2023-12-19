@@ -26,6 +26,6 @@ WORKDIR /home/lesson6/Java-Mysql-Simple-Login-Web-application/
 RUN chmod -R 777 ./ 
 RUN mvn package 
 WORKDIR /home/lesson6/Java-Mysql-Simple-Login-Web-application/target/
-RUN cp LoginWebApp.war   /usr/local/tomcat/webapps/
+RUN cp LoginWebApp.war   /usr/local/tomcat/webapps/ && cp LoginWebApp.war /opt/tomcat/webapps/
 #RUN cp ./lesson6/Java-Mysql-Simple-Login-Web-application/target/LoginWebApp.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
