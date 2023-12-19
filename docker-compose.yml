@@ -1,0 +1,21 @@
+---
+version: '3'
+services:
+    build-webapp:
+      build: 
+        context: /home/ubuntu/repo
+        dockerfile: Dockerfile 
+      volumes: 
+        - data:/usr/local/tomcat/webapp
+
+    web-server:
+        image: woahbase/alpine-tomcat:x86_64
+        ports: 8080:8080
+        service_start:
+          - build-webapp
+        volumes: 
+          - data:/usr/local/tomcat/webapp
+      
+
+volumes: 
+  data:
