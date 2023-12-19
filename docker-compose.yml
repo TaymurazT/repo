@@ -15,7 +15,7 @@ services:
         depends_on:
           - build-webapp
         volumes: 
-          - data: /usr/local/tomcat/webapp
+        - data: /usr/local/tomcat/webapp
       
 
 volumes: 
