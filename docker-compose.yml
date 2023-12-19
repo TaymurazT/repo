@@ -9,7 +9,7 @@ services:
         - data:/usr/local/tomcat/webapps
 
     webserver:
-        image: tomcat:9.0.84-jdk11
+        image: woahbase/alpine-tomcat:x86_64
         ports: 
           - 8080:8080        
         depends_on:
