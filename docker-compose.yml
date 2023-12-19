@@ -6,7 +6,7 @@ services:
         context: /home/ubuntu/repo
         dockerfile: Dockerfile 
       volumes: 
-        - data:/usr/local/tomcat/webapp
+        - data: /usr/local/tomcat/webapp
 
     webserver:
         image: tomcat:9.0.84-jdk11
@@ -15,7 +15,7 @@ services:
         depends_on:
           - build-webapp
         volumes: 
-          - data:/usr/local/tomcat/webapp
+          - data: /usr/local/tomcat/webapp
       
 
 volumes: 
